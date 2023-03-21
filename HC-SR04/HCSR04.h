@@ -9,17 +9,17 @@
 
 class HCSR04 {
 	private:
-		struct PinData {
+		struct PinData_ {
 			volatile uint8_t* pDdr;
 			volatile uint8_t* pPort;
 			volatile uint8_t* pPin;
 			uint8_t pinNum;
 		};
 			
-		PinData pinTrig;
-		PinData pinEcho;
+		PinData_ pinTrig_;
+		PinData_ pinEcho_;
 		
-		uint8_t maxRange;
+		uint8_t maxRange_;
 
 	public:
 		HCSR04(const char[2], const char[2], uint8_t);
